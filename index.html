@@ -10,7 +10,8 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .bg-brand-brown { background-color: #2d1e16; }
         .text-brand-brown { color: #a68a64; }
-        .btn-hover:hover { transform: translateY(-2px); transition: all 0.3s ease; }
+        .focus-card { transition: all 0.3s ease; border: 1px solid #f3f4f6; }
+        .focus-card:hover { transform: translateY(-5px); border-color: #a68a64; }
     </style>
 </head>
 <body class="bg-white text-zinc-900">
@@ -21,25 +22,20 @@
                 LELO<span class="text-brand-brown font-normal">TECH</span> BRIDGE
             </div>
             <div class="hidden md:flex gap-8 text-[10px] font-bold tracking-widest text-zinc-500 uppercase">
-                <a href="#about" class="hover:text-brand-brown">About</a>
-                <a href="#mission" class="hover:text-brand-brown">Mission</a>
-                <a href="#contact" class="hover:text-brand-brown">Contact</a>
+                <a href="#about" class="hover:text-brand-brown transition">About</a>
+                <a href="#mission" class="hover:text-brand-brown transition">Mission</a>
+                <a href="#focus" class="hover:text-brand-brown transition">Focus Areas</a>
+                <a href="#contact" class="hover:text-brand-brown transition">Contact</a>
             </div>
         </nav>
 
-        <section class="max-w-7xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight mb-8">
-                    Bridging Businesses With <br><span class="text-brand-brown italic font-light">Tech-Talent.</span>
-                </h1>
-                <p class="text-zinc-500 text-lg mb-10 max-w-md">
-                    Leading the intelligence revolution by placing the world's most capable engineers and architects.
-                </p>
-            </div>
-            <div class="hidden md:block">
-                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070" 
-                     alt="Technology Network" class="rounded-2xl shadow-2xl">
-            </div>
+        <section class="max-w-7xl mx-auto px-6 py-24 md:py-32 text-center">
+            <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight leading-tight mb-8">
+                Bridging Businesses With <br><span class="text-brand-brown italic font-light">Tech-Talent.</span>
+            </h1>
+            <p class="text-zinc-500 text-lg mb-10 max-w-2xl mx-auto">
+                The premium architectural bridge connecting the world's most innovative companies with elite intelligence engineers.
+            </p>
         </section>
     </header>
 
@@ -70,14 +66,32 @@
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-zinc-50 border-y border-zinc-100">
+    <section id="focus" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-3xl font-extrabold mb-16">Focus Areas</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="focus-card p-12 rounded-sm bg-zinc-50">
+                    <div class="text-brand-brown text-4xl mb-6">🧠</div>
+                    <h3 class="text-2xl font-bold mb-4 italic">LLM Deployment</h3>
+                    <p class="text-zinc-600 leading-relaxed">Specializing in engineers proficient in GPT-4, Claude 3.5, and Llama architectures, focusing on fine-tuning and RAG pipeline integration.</p>
+                </div>
+                <div class="focus-card p-12 rounded-sm bg-zinc-50">
+                    <div class="text-brand-brown text-4xl mb-6">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-4 italic">Data Infrastructure</h3>
+                    <p class="text-zinc-600 leading-relaxed">Connecting businesses with architects who build resilient data lakes, vector databases, and real-time streaming infrastructures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-zinc-100 border-y border-zinc-200">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-12 border border-zinc-200 rounded-sm text-center btn-hover shadow-sm">
+            <div class="bg-white p-12 rounded-sm text-center shadow-sm">
                 <h3 class="text-2xl font-bold mb-6 italic">I Am A Candidate</h3>
                 <p class="text-zinc-500 mb-8 text-sm">Join our elite network of engineers and architects.</p>
                 <a href="https://forms.gle/ndVKEN4ARcR3Drab7" target="_blank" class="inline-block bg-black text-white px-10 py-4 text-[10px] font-bold tracking-[0.2em] uppercase">Join the Network</a>
             </div>
-            <div class="bg-white p-12 border border-zinc-200 rounded-sm text-center btn-hover shadow-sm">
+            <div class="bg-white p-12 rounded-sm text-center shadow-sm">
                 <h3 class="text-2xl font-bold mb-6 italic">I Am A Client</h3>
                 <p class="text-zinc-500 mb-8 text-sm">Access the talent you need to scale your innovation.</p>
                 <a href="https://forms.gle/4tyHHNJ6wRxhmpVHA" target="_blank" class="inline-block bg-brand-brown text-white px-10 py-4 text-[10px] font-bold tracking-[0.2em] uppercase">Hire Talent</a>
@@ -86,24 +100,29 @@
     </section>
 
     <section id="contact" class="py-24 px-6 bg-white">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-16">Get in touch with <span class="text-brand-brown italic">LeloTech.</span></h2>
+        <div class="max-w-5xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="flex flex-col items-center">
-                    <span class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase mb-2">Contact Us</span>
-                    <a href="tel:+260973533172" class="text-2xl font-bold hover:text-brand-brown transition">+260 973 533172</a>
+                <div class="flex items-center gap-6 p-8 border border-zinc-100 rounded-sm">
+                    <div class="text-3xl">📞</div>
+                    <div>
+                        <span class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase block">Contact Us</span>
+                        <a href="tel:+260973533172" class="text-xl font-bold hover:text-brand-brown transition">+260 973 533172</a>
+                    </div>
                 </div>
-                <div class="flex flex-col items-center">
-                    <span class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase mb-2">Email Us</span>
-                    <a href="mailto:letechbridgerecruiting@gmail.com" class="text-xl font-bold hover:text-brand-brown transition">letechbridgerecruiting@gmail.com</a>
+                <div class="flex items-center gap-6 p-8 border border-zinc-100 rounded-sm">
+                    <div class="text-3xl">✉️</div>
+                    <div>
+                        <span class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase block">Email Us</span>
+                        <a href="mailto:letechbridgerecruiting@gmail.com" class="text-lg font-bold hover:text-brand-brown transition break-all">letechbridgerecruiting@gmail.com</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-zinc-100 text-center">
+    <footer class="py-12 border-t border-zinc-100 text-center bg-zinc-50">
         <p class="text-[9px] text-zinc-400 font-bold tracking-[0.6em] uppercase mb-4">LeloTech Bridge Recruitment | Lusaka, Zambia</p>
-        <p class="text-[8px] text-zinc-400">© 2026 LeloTech Bridge. All Intelligence Reserved.</p>
+        <p class="text-[8px] text-zinc-400 uppercase tracking-widest">© 2026 LeloTech Bridge. High-Performance Human Capital.</p>
     </footer>
 
 </body>
