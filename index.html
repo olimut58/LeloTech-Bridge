@@ -1,150 +1,170 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeloTech Bridge | AI Talent Hub</title>
+    <title>LeloTech Bridge | AI Talent Specialists</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
     <style>
-        /* Headings use modern Plus Jakarta Sans, Body/Mission use Times New Roman as requested */
+        /* Headings: Modern Sans | Body: Times New Roman */
         body { font-family: 'Times New Roman', Times, serif; scroll-behavior: smooth; background-color: #ffffff; }
-        h1, h2, h3, nav { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, h4, .font-modern { font-family: 'Plus Jakarta Sans', sans-serif; }
         
-        .text-brand-brown { color: #a68a64; }
         .bg-brand-brown { background-color: #2d1e16; }
+        .text-brand-brown { color: #a68a64; }
+        .border-brand-brown { border-color: #a68a64; }
         
         .bento-item {
             border: 1px solid #e5e7eb;
             padding: 2.5rem;
             transition: all 0.3s ease;
+            background-color: #ffffff;
         }
-        .bento-item:hover { border-color: #a68a64; }
+        .bento-item:hover { border-color: #a68a64; transform: translateY(-2px); }
         
-        .tnr-text { font-family: 'Times New Roman', Times, serif; font-size: 1.1rem; }
+        .tnr-text { font-family: 'Times New Roman', Times, serif; font-size: 1.1rem; line-height: 1.6; }
+        .grayscale-hover { filter: grayscale(100%); transition: filter 0.5s ease; }
+        .grayscale-hover:hover { filter: grayscale(0%); }
     </style>
 </head>
 <body class="text-zinc-900">
 
     <header class="py-24 border-b border-zinc-100 bg-zinc-50">
-        <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 mb-20">
-            <div class="font-extrabold text-2xl tracking-tighter uppercase italic">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center px-10 mb-20">
+            <div class="font-extrabold text-2xl tracking-tighter uppercase italic font-modern">
                 LELO<span class="text-brand-brown font-normal">TECH</span> BRIDGE
             </div>
-            <a href="#contact" class="text-[10px] font-bold tracking-widest border border-zinc-900 px-6 py-2 hover:bg-black hover:text-white transition">CONNECT</a>
+            <a href="#contact" class="font-modern text-[10px] font-bold tracking-widest border border-zinc-900 px-8 py-2.5 hover:bg-black hover:text-white transition uppercase">Get in Touch</a>
         </nav>
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">Welcome To LeloTech Bridge</h1>
-            <p class="text-brand-brown uppercase tracking-[0.3em] font-normal tnr-text">We have specialized talent in Ai roles</p>
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 font-modern">Welcome To LeloTech Bridge</h1>
+            <p class="text-brand-brown uppercase tracking-[0.25em] tnr-text">we have specialized talent in Ai roles</p>
         </div>
     </header>
 
     <section id="about" class="py-24 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
             <div class="bento-item bg-zinc-50 border-none flex flex-col justify-center">
-                <h2 class="text-xs font-black tracking-[0.5em] text-brand-brown uppercase mb-4">Our About</h2>
-                <div class="w-12 h-1 bg-brand-brown"></div>
+                <h2 class="text-xs font-black tracking-[0.5em] text-brand-brown uppercase mb-4 font-modern">About Us</h2>
+                <div class="w-12 h-0.5 bg-brand-brown"></div>
             </div>
             <div class="md:col-span-2 bento-item">
-                <p class="tnr-text leading-relaxed text-zinc-700">
+                <p class="tnr-text text-zinc-700">
                     LeloTech Bridge is an Online specialized recruitment firm dedicated to closing the gap between businesses and elite technical professionals. In an era where technology is advancing, LeloTech Bridge provides a high touch vetted approach to sourcing, screening and placing software Engineers, Data Scientists and Product leaders.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="mission" class="bg-brand-brown text-white py-24 px-6 text-center">
+    <section class="bg-brand-brown text-white py-24 px-6 text-center">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-[10px] font-bold tracking-[0.5em] uppercase mb-8 opacity-40">Our Mission</h2>
-            <p class="text-2xl md:text-4xl leading-tight tnr-text italic">
+            <h2 class="font-modern text-[10px] font-bold tracking-[0.5em] uppercase mb-8 opacity-40">Our Mission</h2>
+            <p class="text-2xl md:text-4xl tnr-text italic leading-relaxed">
                 "To accelerate innovation by connecting businesses with the tech-talent capable of building the future."
             </p>
         </div>
     </section>
 
-    <section class="py-24 px-6 border-b border-zinc-100">
+    <section class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-[10px] font-black tracking-[0.5em] uppercase mb-16">Our Focus Areas</h2>
+            <h2 class="text-center font-modern text-[10px] font-black tracking-[0.5em] uppercase mb-16">Our Focus Areas</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bento-item text-center">
-                    <svg class="w-10 h-10 mx-auto mb-6 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    <h3 class="font-bold mb-3 uppercase tracking-tighter">LLM Deployment</h3>
-                    <p class="tnr-text text-zinc-500 text-sm">Large Language Model integration.</p>
+                    <svg class="w-10 h-10 mx-auto mb-6 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    <h3 class="font-bold mb-3 uppercase tracking-tighter font-modern text-sm">LLM Deployment</h3>
+                    <p class="tnr-text text-zinc-500 text-sm italic">Specialized AI modeling & engineering.</p>
                 </div>
                 <div class="bento-item text-center">
-                    <svg class="w-10 h-10 mx-auto mb-6 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7C5 4 4 5 4 7z M4 10h16 M4 14h16"></path></svg>
-                    <h3 class="font-bold mb-3 uppercase tracking-tighter">Data Infrastructure</h3>
-                    <p class="tnr-text text-zinc-500 text-sm">Resilient data lakes and vector stores.</p>
+                    <svg class="w-10 h-10 mx-auto mb-6 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <h3 class="font-bold mb-3 uppercase tracking-tighter font-modern text-sm">Data Infrastructure</h3>
+                    <p class="tnr-text text-zinc-500 text-sm italic">Scalable architecture & pipeline design.</p>
                 </div>
-                <div class="bento-item text-center bg-zinc-50 border-none">
-                    <svg class="w-10 h-10 mx-auto mb-6 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <h3 class="font-bold mb-3 uppercase tracking-tighter">Expert Vetting</h3>
-                    <p class="tnr-text text-zinc-400 text-sm">100% Architectural alignment.</p>
+                <div class="bento-item bg-zinc-50 border-none flex items-center justify-center">
+                    <span class="font-modern font-bold text-zinc-300 uppercase tracking-widest text-[10px] text-center">Vetted Intelligence<br>Network</span>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="flex flex-col md:flex-row">
-        <a href="https://forms.gle/ndVKEN4ARcR3Drab7" target="_blank" class="flex-1 bg-black text-white py-24 px-10 text-center hover:opacity-90 transition">
-            <h3 class="text-3xl font-extrabold mb-2 italic">I Am A Candidate</h3>
-            <p class="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">Join the Network</p>
+        <a href="https://forms.gle/ndVKEN4ARcR3Drab7" target="_blank" class="flex-1 bg-black text-white py-32 px-10 text-center hover:bg-zinc-900 transition duration-500 group">
+            <h3 class="text-3xl font-extrabold mb-2 italic font-modern">I Am A Candidate</h3>
+            <p class="font-modern text-zinc-500 text-[10px] uppercase tracking-widest font-bold group-hover:text-white transition">Apply for AI Roles</p>
         </a>
-        <a href="https://forms.gle/4tyHHNJ6wRxhmpVHA" target="_blank" class="flex-1 bg-brand-brown text-white py-24 px-10 text-center hover:opacity-95 transition">
-            <h3 class="text-3xl font-extrabold mb-2 italic">I Am A Client</h3>
-            <p class="text-zinc-300 text-[10px] uppercase tracking-widest font-bold">Request Talent</p>
+        <a href="https://forms.gle/4tyHHNJ6wRxhmpVHA" target="_blank" class="flex-1 bg-brand-brown text-white py-32 px-10 text-center hover:opacity-95 transition duration-500 group">
+            <h3 class="text-3xl font-extrabold mb-2 italic font-modern">I Am A Client</h3>
+            <p class="font-modern text-zinc-300 text-[10px] uppercase tracking-widest font-bold group-hover:text-white transition">Request Vetted Talent</p>
         </a>
     </section>
 
-    <section class="py-24 px-6 bg-zinc-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto bento-item border-zinc-100">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-4xl font-extrabold mb-6 italic">Why Us?</h2>
-                    <h3 class="text-brand-brown font-bold tracking-widest text-sm uppercase mb-4">Niche Expertise</h3>
+                    <h2 class="text-4xl font-extrabold mb-6 italic tracking-tighter font-modern uppercase">Why Us?</h2>
+                    <h4 class="font-modern text-brand-brown font-bold tracking-[0.3em] text-[10px] uppercase mb-6">Niche Expertise</h4>
                     <p class="tnr-text text-xl leading-relaxed text-zinc-700">
-                        We don't just find people who use the tools, we find the people who build them. Going beyond LinkedIn, we source from our niche communities, reducing the high cost of the talent gap.
+                        NICHE EXPERTISE- We don't just find people who use the tools, we find the people who build them going beyond LinkedIn, sourcing from our niche communities, and reducing on high cost of talent gap.
                     </p>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=400" class="rounded h-40 w-full object-cover grayscale hover:grayscale-0 transition" alt="African Excellence">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400" class="rounded h-40 w-full object-cover grayscale hover:grayscale-0 transition" alt="Networking">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400" class="rounded h-40 w-full object-cover grayscale hover:grayscale-0 transition" alt="Innovation">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400" class="rounded h-40 w-full object-cover grayscale hover:grayscale-0 transition" alt="Tech Tools">
+                <div class="grid grid-cols-2 gap-3">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400" class="rounded-sm grayscale-hover h-44 w-full object-cover" alt="Collaboration">
+                    <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=400" class="rounded-sm grayscale-hover h-44 w-full object-cover" alt="African Innovation">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=400" class="rounded-sm grayscale-hover h-44 w-full object-cover" alt="Process Optimization">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400" class="rounded-sm grayscale-hover h-44 w-full object-cover" alt="Networking">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-white border-t border-zinc-100">
+    <section class="py-24 px-6 bg-zinc-50 border-y border-zinc-100">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-[10px] font-black tracking-[0.5em] uppercase mb-16">Core Values</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <h2 class="text-center font-modern text-[10px] font-black tracking-[0.5em] uppercase mb-16">Core Values</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="bento-item text-center">
-                    <h4 class="font-bold mb-2 uppercase text-xs tracking-widest">Intelligence</h4>
-                    <p class="tnr-text text-sm text-zinc-500">Deep technical vetting of every architect.</p>
+                    <h4 class="font-modern font-bold text-xs uppercase tracking-widest mb-3">Problem Solving</h4>
+                    <p class="tnr-text text-sm text-zinc-500 italic">Bridging the complex gap.</p>
                 </div>
                 <div class="bento-item text-center">
-                    <h4 class="font-bold mb-2 uppercase text-xs tracking-widest">Expertise</h4>
-                    <p class="tnr-text text-sm text-zinc-500">Domain-specific knowledge in AI/ML.</p>
+                    <h4 class="font-modern font-bold text-xs uppercase tracking-widest mb-3">Intelligence</h4>
+                    <p class="tnr-text text-sm text-zinc-500 italic">Vetting architectural depth.</p>
                 </div>
                 <div class="bento-item text-center">
-                    <h4 class="font-bold mb-2 uppercase text-xs tracking-widest">Problem Solving</h4>
-                    <p class="tnr-text text-sm text-zinc-500">Reducing friction in talent acquisition.</p>
+                    <h4 class="font-modern font-bold text-xs uppercase tracking-widest mb-3">Expertise</h4>
+                    <p class="tnr-text text-sm text-zinc-500 italic">AI/ML focused mastery.</p>
                 </div>
                 <div class="bento-item text-center">
-                    <h4 class="font-bold mb-2 uppercase text-xs tracking-widest">Optimization</h4>
-                    <p class="tnr-text text-sm text-zinc-500">Streamlining high-growth engineering teams.</p>
+                    <h4 class="font-modern font-bold text-xs uppercase tracking-widest mb-3">Connection</h4>
+                    <p class="tnr-text text-sm text-zinc-500 italic">Niche tech communities.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 bg-zinc-50 border-t border-zinc-100">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-            <div class="bento-item flex items-center gap-6 bg-white">
-                <svg class="w-8 h-8 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                <div>
-                    <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest block mb-1">Contact Us</span>
-                    <a href="tel:+2609
+    <section id="contact" class="py-24 px-6 bg-white">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+            <div class="bento-item items-center text-center">
+                <svg class="w-8 h-8 text-brand-brown mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <span class="font-modern text-[10px] font-bold text-zinc-400 uppercase tracking-widest mb-1">Contact Us</span>
+                <a href="tel:+260973533172" class="font-modern text-lg font-bold hover:text-brand-brown transition tracking-tighter">+260 973 533172</a>
+            </div>
+            <a href="https://chat.whatsapp.com/BJKANfpA6oJKs6XHs15Mcy" target="_blank" class="bento-item items-center text-center hover:bg-green-50 transition border-green-100">
+                <svg class="w-8 h-8 text-green-600 mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                <span class="font-modern text-[10px] font-bold text-zinc-400 uppercase tracking-widest mb-1">WhatsApp Community</span>
+                <span class="font-modern text-sm font-bold text-green-700">Join Community</span>
+            </a>
+            <div class="bento-item items-center text-center">
+                <svg class="w-8 h-8 text-brand-brown mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <span class="font-modern text-[10px] font-bold text-zinc-400 uppercase tracking-widest mb-1">Email Us</span>
+                <a href="mailto:letechbridgerecruiting@gmail.com" class="font-modern text-sm font-bold hover:text-brand-brown transition break-all italic">letechbridgerecruiting@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center bg-zinc-50 border-t border-zinc-100">
+        <p class="font-modern text-[9px] text-zinc-300 font-bold tracking-[0.6em] uppercase">LeloTech Bridge | High-Performance Human Capital</p>
+    </footer>
+
+</body>
+</html>
