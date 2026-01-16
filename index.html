@@ -1,35 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeloTech Bridge | Elite AI Recruitment</title>
+    <title>LeloTech Bridge</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
     <style>
-        /* Base Configuration */
-        body { background-color: #ffffff; overflow-x: hidden; scroll-behavior: smooth; }
-        .tnr-text { font-family: 'Times New Roman', Times, serif; line-height: 1.5; }
-        .font-modern { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.02em; }
+        body { background-color: #ffffff; margin: 0; padding: 0; overflow-x: hidden; scroll-behavior: smooth; }
+        .tnr-font { font-family: 'Times New Roman', Times, serif; }
+        .modern-font { font-family: sans-serif; }
         .text-brand-brown { color: #a68a64; }
         .bg-brand-brown { background-color: #2d1e16; }
 
-        /* Brown Subtitle Utility */
-        .subtitle-brown { 
-            color: #a68a64; 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            font-size: 10px; 
-            font-weight: 800; 
-            text-transform: uppercase; 
-            letter-spacing: 0.2em; 
-            margin-bottom: 4px; 
-            display: block;
-        }
-
-        /* Parallax Hero Enhancement */
-        .parallax-hero {
-            background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+        /* Parallax Background */
+        .parallax {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                             url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600');
             background-attachment: fixed;
             background-position: center;
@@ -38,180 +23,128 @@
             height: 70vh;
         }
 
-        /* Bento Grid Architecture */
-        .bento-card {
-            border: 1px solid #f2f2f2;
-            padding: 1.5rem;
-            background-color: #ffffff;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        /* Scroll Reveal Logic */
+        /* Scroll Reveal Effect */
         .reveal {
             opacity: 0;
-            transform: translateY(25px);
-            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
         }
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Mobile Compression - Removing Gaps */
+        .bento-box {
+            border: 1px solid #f0f0f0;
+            padding: 2rem;
+            height: 100%;
+        }
+
+        /* Mobile Optimization: No huge gaps */
         @media (max-width: 768px) {
-            .parallax-hero { background-attachment: scroll; height: 55vh; }
-            .bento-container { gap: 0.5rem !important; padding: 0.5rem !important; }
-            section { padding: 0 !important; }
-            .bento-card { padding: 1.25rem; }
+            .parallax { background-attachment: scroll; height: 50vh; }
+            .section-gap { gap: 0.5rem !important; }
+            .container-padding { padding: 0.5rem !important; }
+            section { margin-bottom: 0.5rem !important; }
         }
     </style>
 </head>
-<body class="text-zinc-900">
+<body>
 
-    <header class="parallax-hero flex flex-col items-center justify-center text-center px-6">
+    <header class="parallax flex flex-col items-center justify-center text-center px-4">
         <div class="reveal">
-            <h1 class="text-4xl md:text-7xl font-extrabold font-modern text-white mb-2">Welcome To LeloTech Bridge</h1>
-            <p class="tnr-text text-brand-brown italic text-lg md:text-xl">we have specialized talent in Ai roles</p>
+            <h1 class="text-white text-4xl md:text-6xl font-bold mb-2 modern-font">Welcome To LeloTech Bridge</h1>
+            <p class="text-brand-brown tnr-font text-lg md:text-xl">we have specialized talent in Ai roles</p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto bento-container flex flex-col gap-2 md:gap-3 py-3">
-        
+    <div class="max-w-7xl mx-auto container-padding p-4 flex flex-col section-gap gap-2 md:gap-4">
+
         <section class="reveal">
-            <div class="bento-card">
-                <h2 class="font-modern text-2xl font-bold mb-2 uppercase">About Us</h2>
-                <p class="tnr-text text-zinc-700 text-base md:text-lg">
+            <div class="bento-box">
+                <h2 class="text-2xl font-bold mb-3 modern-font">About Us</h2>
+                <p class="tnr-font text-zinc-800 text-base leading-relaxed">
                     LeloTech Bridge is an online recruitment firm specialized to bridging the gap between businesses and elite technical professionals. In an era where technology is advancing, LeloTech Bridge provides a high touch vetted approach to sourcing, screening and placing software Engineers, Data Scientists and Product leaders.
                 </p>
             </div>
         </section>
 
         <section class="reveal">
-            <div class="bento-card bg-brand-brown text-white border-none">
-                <span class="subtitle-brown">Corporate Vision</span>
-                <h2 class="font-modern text-2xl font-bold mb-2 uppercase">Our Mission</h2>
-                <p class="tnr-text italic text-zinc-200 text-lg">
+            <div class="bento-box">
+                <span class="text-brand-brown font-bold uppercase text-xs block mb-1">Our Mission</span>
+                <p class="tnr-font text-lg text-zinc-800">
                     To accelerate innovation by connecting businesses with the tech-talent capable of building the future.
                 </p>
             </div>
         </section>
 
         <section class="reveal">
-            <div class="grid md:grid-cols-2 gap-2 md:gap-3">
-                <div class="bento-card flex flex-row items-center gap-5 py-10">
-                    <svg class="w-10 h-10 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    <div>
-                        <span class="subtitle-brown">Core Focus</span>
-                        <h3 class="font-modern font-bold text-xl uppercase">LLM</h3>
-                    </div>
+            <span class="text-brand-brown font-bold uppercase text-xs block mb-2">Focus Areas</span>
+            <div class="grid md:grid-cols-2 section-gap gap-2 md:gap-4">
+                <div class="bento-box flex items-center gap-4">
+                    <svg class="w-8 h-8 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <h3 class="font-bold modern-font">LLM</h3>
                 </div>
-                <div class="bento-card flex flex-row items-center gap-5 py-10">
-                    <svg class="w-10 h-10 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                    <div>
-                        <span class="subtitle-brown">Infrastructure</span>
-                        <h3 class="font-modern font-bold text-xl uppercase">Data Infrastructure</h3>
-                    </div>
+                <div class="bento-box flex items-center gap-4">
+                    <svg class="w-8 h-8 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <h3 class="font-bold modern-font">Data Infrastructure</h3>
                 </div>
             </div>
         </section>
 
-        <section class="grid grid-cols-2 gap-2 md:gap-3 reveal">
-            <a href="https://forms.gle/ndVKEN4ARcR3Drab7" target="_blank" class="bg-black text-white p-10 text-center rounded-sm hover:opacity-90 transition">
-                <span class="subtitle-brown">Click Here</span>
-                <p class="font-modern text-xs font-bold uppercase tracking-widest">I Am A Candidate</p>
-            </a>
-            <a href="https://forms.gle/4tyHHNJ6wRxhmpVHA" target="_blank" class="bg-brand-brown text-white p-10 text-center rounded-sm hover:opacity-90 transition">
-                <span class="subtitle-brown text-white opacity-60">Click Here</span>
-                <p class="font-modern text-xs font-bold uppercase tracking-widest">I Am A Client</p>
-            </a>
-        </section>
-
-        <section class="reveal">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3">
-                <div class="bento-card items-center text-center">
-                    <span class="subtitle-brown">Value 01</span>
-                    <svg class="w-6 h-6 mb-2 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.989-2.386l-.548-.547z"></path></svg>
-                    <h4 class="font-modern font-bold text-[10px] uppercase">Intelligence</h4>
-                </div>
-                <div class="bento-card items-center text-center">
-                    <span class="subtitle-brown">Value 02</span>
-                    <svg class="w-6 h-6 mb-2 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18"></path></svg>
-                    <h4 class="font-modern font-bold text-[10px] uppercase">Problem Solving</h4>
-                </div>
-                <div class="bento-card items-center text-center">
-                    <span class="subtitle-brown">Value 03</span>
-                    <svg class="w-6 h-6 mb-2 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <h4 class="font-modern font-bold text-[10px] uppercase">Expertise</h4>
-                </div>
-                <div class="bento-card items-center text-center">
-                    <span class="subtitle-brown">Value 04</span>
-                    <svg class="w-6 h-6 mb-2 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857"></path></svg>
-                    <h4 class="font-modern font-bold text-[10px] uppercase">Community</h4>
-                </div>
+        <section class="grid grid-cols-2 section-gap gap-2 md:gap-4 reveal">
+            <div class="bg-black text-white p-10 text-center flex flex-col justify-center items-center">
+                <span class="text-brand-brown font-bold uppercase text-[10px] mb-1">Click here</span>
+                <p class="modern-font font-bold text-xs uppercase tracking-widest">I Am a Candidate</p>
+            </div>
+            <div class="bg-brand-brown text-white p-10 text-center flex flex-col justify-center items-center">
+                <span class="text-white opacity-60 font-bold uppercase text-[10px] mb-1">Click here</span>
+                <p class="modern-font font-bold text-xs uppercase tracking-widest">I Am A Client</p>
             </div>
         </section>
 
         <section class="reveal">
-            <div class="bento-card bg-zinc-50 border-none">
-                <h2 class="font-modern text-2xl font-bold mb-3 uppercase">Why Us</h2>
-                <p class="tnr-text text-zinc-700 italic text-lg">
+            <div class="bento-box">
+                <h2 class="text-2xl font-bold mb-3 modern-font">Why Us</h2>
+                <p class="tnr-font text-zinc-800">
                     We don't just find people who use the tools, we find the people who build them going beyond LinkedIn, sourcing from our niche communities, and reducing on high cost of talent gap.
                 </p>
             </div>
         </section>
 
         <section class="reveal">
-            <div class="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-3 h-64 md:h-96">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" class="h-full w-full object-cover grayscale hover:grayscale-0 transition duration-700 rounded-sm" alt="Tech Excellence">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600" class="h-full w-full object-cover grayscale hover:grayscale-0 transition duration-700 rounded-sm" alt="Networking Community">
+            <span class="text-brand-brown font-bold uppercase text-xs block mb-2">Core Values</span>
+            <div class="grid grid-cols-2 lg:grid-cols-4 section-gap gap-2 md:gap-4">
+                <div class="bento-box flex flex-col items-center text-center py-6">
+                    <svg class="w-6 h-6 mb-2 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.989-2.386l-.548-.547z"></path></svg>
+                    <h4 class="modern-font font-bold text-[10px] uppercase">Problem Solving</h4>
+                </div>
+                <div class="bento-box flex flex-col items-center text-center py-6">
+                    <svg class="w-6 h-6 mb-2 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h4 class="modern-font font-bold text-[10px] uppercase">Expertise</h4>
+                </div>
+                <div class="bento-box flex flex-col items-center text-center py-6">
+                    <svg class="w-6 h-6 mb-2 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <h4 class="modern-font font-bold text-[10px] uppercase">Intelligence</h4>
+                </div>
+                <div class="bento-box flex flex-col items-center text-center py-6">
+                    <svg class="w-6 h-6 mb-2 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857"></path></svg>
+                    <h4 class="modern-font font-bold text-[10px] uppercase">Networking</h4>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-3 reveal">
-            <div class="bento-card flex flex-col items-center justify-center p-4">
+        <section class="reveal">
+            <div class="grid grid-cols-2 section-gap gap-2 md:gap-4 h-64 md:h-80">
+                <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=600" class="h-full w-full object-cover rounded-sm grayscale hover:grayscale-0 transition duration-500" alt="Tech People Networking">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600" class="h-full w-full object-cover rounded-sm grayscale hover:grayscale-0 transition duration-500" alt="Innovation Hub">
+            </div>
+        </section>
+
+        <section id="contact" class="grid grid-cols-2 md:grid-cols-5 section-gap gap-2 md:gap-4 reveal">
+            <div class="bento-box flex flex-col items-center justify-center p-4">
                 <svg class="w-5 h-5 mb-1 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"></path></svg>
-                <div class="text-[8px] font-bold">+260 973 533172</div>
+                <div class="text-[9px] font-bold">+260 973 533172</div>
             </div>
-            <a href="https://chat.whatsapp.com/BJKANfpA6oJKs6XHs15Mcy" target="_blank" class="bento-card flex flex-col items-center justify-center p-4 hover:bg-green-50 transition">
-                <svg class="w-5 h-5 mb-1 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                <div class="text-[9px] font-bold uppercase text-green-700">WhatsApp</div>
-            </a>
-            <a href="https://shorturl.at/rPC0F" target="_blank" class="bento-card flex flex-col items-center justify-center p-4 hover:bg-blue-50 transition">
-                <svg class="w-5 h-5 mb-1 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                <div class="text-[9px] font-bold uppercase text-blue-600">Facebook</div>
-            </a>
-            <a href="https://shorturl.at/Xf9Ja" target="_blank" class="bento-card flex flex-col items-center justify-center p-4 hover:bg-blue-50 transition">
-                <svg class="w-5 h-5 mb-1 text-blue-700" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                <div class="text-[9px] font-bold uppercase text-blue-800">LinkedIn</div>
-            </a>
-            <div class="bento-card flex flex-col items-center justify-center p-4 overflow-hidden">
-                <svg class="w-5 h-5 mb-1 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                <div class="text-[6.5px] font-bold italic text-center break-all leading-tight">lelotechbridgerecruiting@gmail.com</div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="py-6 text-center opacity-30 text-[9px] tracking-widest uppercase font-modern">
-        © 2026 LeloTech Bridge. Bridging Elite Technical Talent.
-    </footer>
-
-    <script>
-        function reveal() {
-            const reveals = document.querySelectorAll(".reveal");
-            for (let i = 0; i < reveals.length; i++) {
-                const windowHeight = window.innerHeight;
-                const elementTop = reveals[i].getBoundingClientRect().top;
-                const elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal(); // Initial check
-    </script>
-</body>
-</html>
+            <a href="https://chat.whatsapp.com/BJKANfpA6oJKs6XHs15Mcy" target="_blank" class="bento-box flex flex-col items-center justify-center p-4">
+                <svg class="w-5 h-5 mb-1 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612
